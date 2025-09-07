@@ -1,17 +1,17 @@
 {
-	"name": "@vscode/webview-ui-toolkit",
+	"name": "darbot-webview-ui",
 	"version": "1.4.0",
-	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+	"description": "An unofficial continuation of Microsoft's deprecated VSCode Webview UI Toolkit - A component library for building webview-based extensions in Visual Studio Code.",
+	"homepage": "https://github.com/darbotlabs/darbot-webview-ui#readme",
 	"license": "MIT",
-	"author": "Microsoft Corporation",
+	"author": "DarBot Labs",
 	"type": "module",
 	"bugs": {
-		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
+		"url": "https://github.com/darbotlabs/darbot-webview-ui/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
+		"url": "git+https://github.com/darbotlabs/darbot-webview-ui.git"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -32,10 +32,10 @@
 		"@microsoft/fast-element": "^1.12.0",
 		"@microsoft/fast-foundation": "^2.49.4",
 		"@microsoft/fast-react-wrapper": "^0.3.22",
-		"tslib": "^2.6.2"
+		"tslib": "^2.7.0"
 	},
 	"peerDependencies": {
-		"react": ">=16.9.0"
+		"react": ">=16.9.0 <19.0.0"
 	},
 	"devDependencies": {
 		"@microsoft/api-extractor": "^7.38.4",
@@ -43,7 +43,7 @@
 		"@rollup/plugin-commonjs": "^17.1.0",
 		"@rollup/plugin-node-resolve": "^11.2.0",
 		"@rollup/plugin-typescript": "^8.2.0",
-		"@types/react": "^18.0.28",
+		"@types/react": "^18.2.79",
 		"@typescript-eslint/eslint-plugin": "^6.13.2",
 		"eslint": "^8.55.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -64,6 +64,9 @@
 		"ui",
 		"components",
 		"web components",
-		"react"
+		"react",
+		"darbot",
+		"unofficial",
+		"continuation"
 	]
 }

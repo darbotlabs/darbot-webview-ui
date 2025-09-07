@@ -1,17 +1,19 @@
-# Webview UI Toolkit for Visual Studio Code
+# DarBot Webview UI Toolkit
 
-[![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
+[![NPM Version](https://img.shields.io/npm/v/darbot-webview-ui?color=blue)](https://www.npmjs.com/package/darbot-webview-ui)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
-![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 
-> [!WARNING]
-> The Webview UI Toolkit for VS Code will be deprecated on January 1, 2025. See the [deprecation announcement](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/561) for more details.
+> [!NOTE]
+> This is an **unofficial continuation** of Microsoft's deprecated [VSCode Webview UI Toolkit](https://github.com/microsoft/vscode-webview-ui-toolkit), which was deprecated on January 1, 2025. This project aims to maintain and enhance the toolkit with modern dependencies and continued support for VSCode extension development.
+
+> [!WARNING]  
+> This project is **unofficial and unsupported** by Microsoft. It is maintained by the community as a continuation of the original toolkit.
 
 ![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/images/toolkit-artwork.png)
 
 ## Introduction
 
-The Webview UI Toolkit is a component library for building [webview-based extensions](https://code.visualstudio.com/api/extension-guides/webview) in Visual Studio Code.
+The DarBot Webview UI Toolkit is an unofficial continuation of Microsoft's deprecated component library for building [webview-based extensions](https://code.visualstudio.com/api/extension-guides/webview) in Visual Studio Code.
 
 Some of the library's features include:
 
@@ -27,7 +29,7 @@ Follow the [Getting Started Guide](./docs/getting-started.md).
 If you already have a webview-based extension, you can install the toolkit with the following command:
 
 ```
-npm install --save @vscode/webview-ui-toolkit
+npm install --save darbot-webview-ui
 ```
 
 ## Documentation
@@ -35,7 +37,7 @@ npm install --save @vscode/webview-ui-toolkit
 For more information, check out the following documentation:
 
 - [Component Docs](./docs/components.md)
-- [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
+- [Toolkit Extension Samples](https://github.com/darbotlabs/darbot-webview-ui-samples) _(Coming Soon - use [original samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples) with package name updated)_
 - [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 - [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
@@ -46,7 +48,7 @@ For more information, check out the following documentation:
 
 Webviews are a powerful way to add custom functionality beyond what the Visual Studio Code API supports. They're fully customizable, which, historically, has meant that the responsibility of developing UI which aligns with the Visual Studio Code design language and follows our [webview guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews) lies in the hands of extension authors.
 
-The Webview UI Toolkit shifts _some_ of this responsibility away from extension developers. It does this by providing core components that make it easier to build higher quality webview UIs in Visual Studio Code.
+The DarBot Webview UI Toolkit shifts _some_ of this responsibility away from extension developers. It does this by providing core components that make it easier to build higher quality webview UIs in Visual Studio Code.
 
 With all this said, we still strongly encourage you to carefully review whether or not your extension needs to use webviews before building. While webviews provide a great way to add custom functionality, oftentimes, they come at the cost of performance and accessibility.
 
@@ -56,11 +58,13 @@ Finally, if you're ever unsure if your extension should use webviews or not, you
 
 ## Contributing
 
-Read the [contributing](./CONTRIBUTING.md) documentation.
+We welcome contributions to this unofficial continuation of the VSCode Webview UI Toolkit! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
 ## Legal notices
 
-Microsoft and any contributors grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE](LICENSE) file.
+This project is an unofficial continuation of Microsoft's original VSCode Webview UI Toolkit, which was released under the MIT License. The original project can be found at https://github.com/microsoft/vscode-webview-ui-toolkit.
+
+DarBot Labs and any contributors grant you a license to any code in this repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE](LICENSE) file.
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
 

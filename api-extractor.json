@@ -11,6 +11,6 @@
 	},
 	"dtsRollup": {
 		"enabled": true,
-		"untrimmedFilePath": "dist/toolkit.d.ts"
+		"untrimmedFilePath": "dist/darbot-webview-ui.d.ts"
 	}
 }
