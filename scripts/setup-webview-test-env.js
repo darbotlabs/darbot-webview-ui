@@ -17,7 +17,7 @@ async function main() {
 	if (!existsSync('./test-webview')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
-			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/default/component-gallery test-webview');
+			await execShellCommand('npx degit darbotlabs/darbot-webview-ui-samples/default/component-gallery test-webview');
 		} catch (err) {
 			console.log(`${color(['red'], 'Error: Could not copy webview test environment locally')}\n    ${err}`);
 			process.exit();

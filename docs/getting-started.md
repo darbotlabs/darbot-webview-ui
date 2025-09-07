@@ -760,7 +760,9 @@ You should test that this all works. To do this, run the extension and click the
 
 Congratulations on getting started with the Webview UI Toolkit! 🎊
 
-You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. In the same repository, you can take a look at [other sample extensions/templates](https://github.com/microsoft/vscode-webview-ui-toolkit-samples) demonstrating the toolkit in more complex scenarios or with different frontend frameworks and build tools.
+You can find a [completed hello world extension](https://github.com/darbotlabs/darbot-webview-ui-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. In the same repository, you can take a look at [other sample extensions/templates](https://github.com/darbotlabs/darbot-webview-ui-samples) demonstrating the toolkit in more complex scenarios or with different frontend frameworks and build tools.
+
+> **Note:** The DarBot samples repository is currently being set up. In the meantime, you can reference the original [Microsoft samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples) and adapt them to use `darbot-webview-ui` instead of `@vscode/webview-ui-toolkit`.
 
 Also, check out our component documentation and Visual Studio Code resources on how to build extensions.
 

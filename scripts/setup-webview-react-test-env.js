@@ -17,7 +17,7 @@ async function main() {
 	if (!existsSync('./test-webview-react')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
-			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/frameworks/component-gallery-react test-webview-react');
+			await execShellCommand('npx degit darbotlabs/darbot-webview-ui-samples/frameworks/component-gallery-react test-webview-react');
 		} catch (err) {
 			console.log(`${color(['red'], 'Error: Could not copy webview test environment locally')}\n    ${err}`);
 			process.exit();
