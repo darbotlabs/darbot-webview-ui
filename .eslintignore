@@ -15,3 +15,5 @@ coverage
 scripts
 # don't lint webview test environment
 test-webview
+# don't lint SAMPLES folder (has its own eslint configs)
+SAMPLES
