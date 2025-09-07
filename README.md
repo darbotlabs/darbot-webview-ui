@@ -15,10 +15,10 @@ The Webview UI Toolkit is a component library for building [webview-based extens
 
 Some of the library's features include:
 
--   **Visual Studio Code design language:** All components follow the design language of Visual Studio Code, which enables developers to create extensions that have a consistent look and feel with the rest of the editor.
--   **Automatic support for color themes:** All components are designed with theming in mind, and will automatically display the current editor theme.
--   **Tech stacks:** The library ships as a set of web components. This means developers can use the toolkit no matter which tech stack – React, Vue, Svelte, etc. – their extension is built with.
--   **Immediate accessibility:** All components ship with web-standard compliant ARIA labels and keyboard navigation.
+- **Visual Studio Code design language:** All components follow the design language of Visual Studio Code, which enables developers to create extensions that have a consistent look and feel with the rest of the editor.
+- **Automatic support for color themes:** All components are designed with theming in mind, and will automatically display the current editor theme.
+- **Tech stacks:** The library ships as a set of web components. This means developers can use the toolkit no matter which tech stack – React, Vue, Svelte, etc. – their extension is built with.
+- **Immediate accessibility:** All components ship with web-standard compliant ARIA labels and keyboard navigation.
 
 ## Getting started
 
@@ -34,13 +34,13 @@ npm install --save @vscode/webview-ui-toolkit
 
 For more information, check out the following documentation:
 
--   [Component Docs](./docs/components.md)
--   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
--   [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
--   [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
--   [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
--   [Extension API Docs](https://code.visualstudio.com/api)
--   [Figma Toolkit](https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code)
+- [Component Docs](./docs/components.md)
+- [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
+- [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
+- [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+- [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
+- [Extension API Docs](https://code.visualstudio.com/api)
+- [Figma Toolkit](https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code)
 
 ## A note on webview usage
 
