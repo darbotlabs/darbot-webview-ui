@@ -39,7 +39,7 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 ### Basic Radio Group
 
 > **Warning**<br>
-> There is a [known upstream bug](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/476) with `vscode-radio` component selection on first interaction. A workaround fix is to make sure that all radio components have a unique `value` attribute applied as demonstrated below.
+> There is a [known upstream bug](https://github.com/darbotlabs/darbot-webview-ui/issues/476) with `vscode-radio` component selection on first interaction. A workaround fix is to make sure that all radio components have a unique `value` attribute applied as demonstrated below.
 
 ```html
 <vscode-radio-group>

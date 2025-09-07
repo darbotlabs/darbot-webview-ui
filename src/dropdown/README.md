@@ -47,7 +47,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### With Label
 
-_Note: There are [long term plans](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/461#issuecomment-1478408942) to better support labels in dropdown components, but in the meantime the below markup and styling will create a label that adheres to the VS Code design language._
+_Note: There are [long term plans](https://github.com/darbotlabs/darbot-webview-ui/issues/461#issuecomment-1478408942) to better support labels in dropdown components, but in the meantime the below markup and styling will create a label that adheres to the VS Code design language._
 
 ```html
 <div class="dropdown-container">
