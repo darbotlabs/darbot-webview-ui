@@ -11,7 +11,7 @@ This is a sample extension that demonstrates a reference/workaround implementati
 
 There have been many requests (such as [this issue](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/493)) asking for a more interactive data grid.
 
-The Webview UI Toolkit is implemented using a set of unstyled based components from [FAST](https://www.fast.design/). They offer a `data-grid` component which, at this time, statically renders data in a table-like format but does not implement any APIs for interactivity or editability.
+The DarBot Webview UI Toolkit is implemented using a set of unstyled based components from [FAST](https://www.fast.design/). They offer a `data-grid` component which, at this time, statically renders data in a table-like format but does not implement any APIs for interactivity or editability.
 
 Because FAST owns the underlying data grid implementation, first-party support for interactivity will need to come from them. With that said, workaround solutions are possible and this sample extension demonstrates one such solution (initially inspired by [another solution](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/493#issuecomment-1603559439) from [@worksofliam](https://github.com/worksofliam)).
 
@@ -37,7 +37,7 @@ This solution implements the following features:
 
 ```bash
 # Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/default/editable-data-grid editable-data-grid
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/editable-data-grid editable-data-grid
 
 # Navigate into sample directory
 cd editable-data-grid

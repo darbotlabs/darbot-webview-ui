@@ -1,4 +1,4 @@
-import { VSCodeProgressRing } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeProgressRing } from "darbot-webview-ui/react";
 
 export function ProgressRingDemo() {
   return (

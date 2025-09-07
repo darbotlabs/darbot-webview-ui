@@ -34,7 +34,7 @@ async function installLatestToolkitPackage(rootDir, installDir = '') {
     for (const dir of dirs) {
       const dirPath = installDir.length > 0 ? `${rootDir}/${dir}/${installDir}` : `${rootDir}/${dir}`;
       console.log(color(['dim'], `⏳ Updating toolkit in ${dir}...`));
-      await execShellCommand(`cd ${dirPath} && npm i @vscode/webview-ui-toolkit@latest`);
+      await execShellCommand(`cd ${dirPath} && npm i darbot-webview-ui@latest`);
       console.log(color(['dim'], `✅ Latest toolkit package installed in ${dir}!`));
       console.log();
     }

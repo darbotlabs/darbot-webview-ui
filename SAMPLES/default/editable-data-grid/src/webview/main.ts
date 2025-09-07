@@ -5,7 +5,7 @@ import {
   vsCodeDataGridRow,
   DataGrid,
   DataGridCell,
-} from "@vscode/webview-ui-toolkit";
+} from "darbot-webview-ui";
 
 provideVSCodeDesignSystem().register(vsCodeDataGrid(), vsCodeDataGridCell(), vsCodeDataGridRow());
 

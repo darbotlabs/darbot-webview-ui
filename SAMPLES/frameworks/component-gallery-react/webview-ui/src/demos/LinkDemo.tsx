@@ -1,4 +1,4 @@
-import { VSCodeLink } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeLink } from "darbot-webview-ui/react";
 
 export function LinkDemo() {
   return (

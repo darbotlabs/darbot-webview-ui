@@ -1,4 +1,4 @@
-import { VSCodeCheckbox } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeCheckbox } from "darbot-webview-ui/react";
 
 export function CheckboxDemo() {
   return (

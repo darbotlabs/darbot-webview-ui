@@ -1,4 +1,4 @@
-import { VSCodeBadge } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeBadge } from "darbot-webview-ui/react";
 
 export function BadgeDemo() {
   return (

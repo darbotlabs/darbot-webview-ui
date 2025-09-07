@@ -1,14 +1,14 @@
 # Hello World Sample Extension
 
-This is the sample extension that goes along with the Webview UI Toolkit [Getting Started Guide](https://github.com/microsoft/vscode-webview-toolkit/blob/main/docs/getting-started.md).
+This is the sample extension that goes along with the DarBot Webview UI Toolkit [Getting Started Guide](https://github.com/darbotlabs/darbot-webview-ui/blob/main/docs/getting-started.md).
 
 ![A screenshot of the sample extension.](./assets/hello-world.png)
 
 ## Run The Sample
 
 ```bash
-# Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/default/hello-world hello-world
+# Copy sample extension locally  
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/hello-world hello-world
 
 # Navigate into sample directory
 cd hello-world

@@ -1,4 +1,4 @@
-import { VSCodeButton } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeButton } from "darbot-webview-ui/react";
 
 export function ButtonDemo() {
   return (

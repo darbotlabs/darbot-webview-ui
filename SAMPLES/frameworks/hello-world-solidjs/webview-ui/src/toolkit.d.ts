@@ -1,6 +1,6 @@
 import "solid-js";
 
-// An important part of getting the Webview UI Toolkit to work with
+// An important part of getting the DarBot Webview UI Toolkit to work with
 // Solid + TypeScript + JSX is to extend the solid-js JSX.IntrinsicElements
 // type interface to include type annotations for each of the toolkit's components.
 //

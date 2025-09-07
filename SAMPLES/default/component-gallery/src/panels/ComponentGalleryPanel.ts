@@ -130,7 +130,7 @@ export class ComponentGalleryPanel {
           <title>Component Gallery</title>
         </head>
         <body>
-          <h1>Webview UI Toolkit Component Gallery</h1>
+          <h1>DarBot Webview UI Toolkit Component Gallery</h1>
           <section class="component-row">
             ${badgeDemo}
             ${buttonDemo}

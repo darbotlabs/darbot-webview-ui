@@ -3,9 +3,9 @@ import {
   provideVSCodeDesignSystem,
   Checkbox,
   DataGrid,
-} from "@vscode/webview-ui-toolkit";
+} from "darbot-webview-ui";
 
-// In order to use all the Webview UI Toolkit web components they
+// In order to use all the DarBot Webview UI Toolkit web components they
 // must be registered with the browser (i.e. webview) using the
 // syntax below.
 provideVSCodeDesignSystem().register(allComponents);

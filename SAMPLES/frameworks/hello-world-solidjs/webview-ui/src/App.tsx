@@ -1,9 +1,9 @@
 import type { Component } from "solid-js";
-import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeButton } from "darbot-webview-ui";
 import { vscode } from "./utilities/vscode";
 import "./App.css";
 
-// In order to use the Webview UI Toolkit web components they
+// In order to use the DarBot Webview UI Toolkit web components they
 // must be registered with the browser (i.e. webview) using the
 // syntax below.
 provideVSCodeDesignSystem().register(vsCodeButton());

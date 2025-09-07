@@ -1,6 +1,6 @@
 # Component Gallery (React)
 
-This sample extension demonstrates every React component in the Webview UI Toolkit for Visual Studio Code.
+This sample extension demonstrates every React component in the DarBot Webview UI Toolkit for Visual Studio Code.
 
 ![A screenshot of the sample extension.](./assets/component-gallery-react.png)
 
@@ -8,7 +8,7 @@ This sample extension demonstrates every React component in the Webview UI Toolk
 
 ```bash
 # Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/frameworks/component-gallery-react component-gallery-react
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/frameworks/component-gallery-react component-gallery-react
 
 # Navigate into sample directory
 cd component-gallery-react

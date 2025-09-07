@@ -2,7 +2,7 @@ import {
   VSCodeDataGrid,
   VSCodeDataGridCell,
   VSCodeDataGridRow,
-} from "@vscode/webview-ui-toolkit/react";
+} from "darbot-webview-ui/react";
 
 export function DataGridDemo() {
   const rowData = [

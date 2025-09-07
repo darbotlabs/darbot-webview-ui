@@ -1,4 +1,4 @@
-import { VSCodeDivider } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeDivider } from "darbot-webview-ui/react";
 
 export function DividerDemo() {
   return (

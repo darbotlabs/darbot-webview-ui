@@ -1,6 +1,6 @@
 # Weather Webview Sample Extension
 
-This sample extension demonstrates the Webview UI Toolkit for Visual Studio Code being used within a Webview View.
+This sample extension demonstrates the DarBot Webview UI Toolkit for Visual Studio Code being used within a Webview View.
 
 ![A screenshot of the sample extension.](./assets/weather-webview.png)
 
@@ -8,7 +8,7 @@ This sample extension demonstrates the Webview UI Toolkit for Visual Studio Code
 
 ```bash
 # Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/default/weather-webview weather-webview
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/weather-webview weather-webview
 
 # Navigate into sample directory
 cd weather-webview
