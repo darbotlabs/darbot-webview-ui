@@ -17,7 +17,7 @@ async function main() {
 	if (!existsSync('./test-webview')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
-			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/default/component-gallery test-webview');
+			await execShellCommand('npx degit darbotlabs/darbot-webview-ui-samples/default/component-gallery test-webview');
 		} catch (err) {
 			console.log(`${color(['red'], 'Error: Could not copy webview test environment locally')}\n    ${err}`);
 			process.exit();
@@ -39,13 +39,13 @@ async function main() {
 	try {
 		console.log(color(['dim'], 'Copying latest toolkit build into webview test environment...'));
 		// Copy web component build directory
-		delDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/dist');
-		createDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/dist');
-		copyDir('./dist', './test-webview/node_modules/@vscode/webview-ui-toolkit');
+		delDir('./test-webview/node_modules/darbot-webview-ui/dist');
+		createDir('./test-webview/node_modules/darbot-webview-ui/dist');
+		copyDir('./dist', './test-webview/node_modules/darbot-webview-ui');
 		// Copy react build directory
-		delDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/react');
-		createDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/react');
-		copyDir('./react', './test-webview/node_modules/@vscode/webview-ui-toolkit');
+		delDir('./test-webview/node_modules/darbot-webview-ui/react');
+		createDir('./test-webview/node_modules/darbot-webview-ui/react');
+		copyDir('./react', './test-webview/node_modules/darbot-webview-ui');
 	} catch (err) {
 		console.log(`${color(['red'], 'Error: Failed to copy latest toolkit build into webview test environment')}\n    ${err}`);
 		process.exit();

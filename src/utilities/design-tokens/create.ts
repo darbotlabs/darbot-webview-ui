@@ -42,7 +42,7 @@ let isThemeListenerInitialized = false;
  * the design token.
  * @returns A FAST CSSDesignToken that emits a CSS custom property.
  */
-export function create<T>(name: string, vscodeThemeVar?: string) {
+export function create<T extends string | number | boolean | symbol | {} | any[] | Uint8Array | null>(name: string, vscodeThemeVar?: string): CSSDesignToken<T> {
 	const designToken = DesignToken.create<T>(name);
 
 	if (vscodeThemeVar) {
@@ -52,12 +52,12 @@ export function create<T>(name: string, vscodeThemeVar?: string) {
 			const uniqueId = 'id' + Math.random().toString(16).slice(2);
 			vscodeThemeVar = `${vscodeThemeVar}-${uniqueId}`;
 		}
-		tokenMappings.set(vscodeThemeVar, designToken);
+		tokenMappings.set(vscodeThemeVar, designToken as CSSDesignToken<any>);
 	}
 	if (!isThemeListenerInitialized) {
 		initThemeChangeListener(tokenMappings);
 		isThemeListenerInitialized = true;
 	}
 
-	return designToken;
+	return designToken as CSSDesignToken<T>;
 }

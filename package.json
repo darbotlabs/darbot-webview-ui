@@ -1,17 +1,17 @@
 {
-	"name": "@vscode/webview-ui-toolkit",
+	"name": "darbot-webview-ui",
 	"version": "1.4.0",
-	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+	"description": "A component library for building webview-based extensions. Unofficial and unsupported continuation of vscode-webview-ui-toolkit.",
+	"homepage": "https://github.com/darbotlabs/darbot-webview-ui#readme",
 	"license": "MIT",
-	"author": "Microsoft Corporation",
+	"author": "DarBot Labs",
 	"type": "module",
 	"bugs": {
-		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
+		"url": "https://github.com/darbotlabs/darbot-webview-ui/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
+		"url": "git+https://github.com/darbotlabs/darbot-webview-ui.git"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -40,30 +40,29 @@
 	"devDependencies": {
 		"@microsoft/api-extractor": "^7.38.4",
 		"@microsoft/eslint-config-fast-dna": "^2.1.0",
-		"@rollup/plugin-commonjs": "^17.1.0",
-		"@rollup/plugin-node-resolve": "^11.2.0",
-		"@rollup/plugin-typescript": "^8.2.0",
+		"@rollup/plugin-commonjs": "^25.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.0",
+		"@rollup/plugin-typescript": "^11.0.0",
+		"@rollup/plugin-terser": "^0.4.4",
 		"@types/react": "^18.0.28",
 		"@typescript-eslint/eslint-plugin": "^6.13.2",
 		"eslint": "^8.55.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-import": "^2.29.0",
 		"prettier": "^3.1.0",
-		"rollup": "^3.29.5",
+		"rollup": "^4.0.0",
 		"rollup-plugin-delete": "^2.0.0",
-		"rollup-plugin-filesize": "^9.1.1",
-		"rollup-plugin-terser": "^7.0.2",
-		"rollup-plugin-transform-tagged-template": "0.0.3",
-		"typescript": "^4.6.2"
+		"rollup-plugin-filesize": "^10.0.0",
+		"typescript": "^5.0.0"
 	},
 	"keywords": [
-		"vscode",
-		"visual studio code",
 		"webview",
-		"extension",
 		"ui",
 		"components",
 		"web components",
-		"react"
+		"react",
+		"darbot",
+		"toolkit",
+		"extension"
 	]
 }
