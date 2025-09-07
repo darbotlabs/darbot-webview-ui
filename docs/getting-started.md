@@ -1,12 +1,12 @@
 # Getting Started Guide
 
-This guide will cover the following steps to get you up and running with the Webview UI Toolkit.
+This guide will cover the following steps to get you up and running with the DarBot Webview UI Toolkit.
 
 1. Create a webview-based extension
 2. Install and set up the toolkit
 3. Set up message passing between the extension and webview
 
-_If you get stuck at any point or if you just want a pre-configured starter extension template, install our [completed hello world sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide._
+_If you get stuck at any point or if you just want a pre-configured starter extension template, install our [completed hello world sample extension](https://github.com/darbotlabs/darbot-webview-ui-samples/tree/main/default/hello-world) based on this guide._
 
 ## Part 1: Create a webview-based extension
 
@@ -366,7 +366,7 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 With an extension created, install the toolkit package using this command:
 
 ```
-npm install --save @vscode/webview-ui-toolkit
+npm install --save darbot-webview-ui
 ```
 
 ### Register the toolkit components
@@ -376,7 +376,7 @@ Create a new directory/file at `src/webview/main.ts`. For now, it will contain t
 ```js
 // file: src/webview/main.ts
 
-import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeButton } from "darbot-webview-ui";
 
 provideVSCodeDesignSystem().register(vsCodeButton());
 ```
@@ -388,7 +388,7 @@ registration function and call it from within the register
 method, like so:
 
 ```js
-import { provideVSCodeDesignSystem, vsCodeButton, vsCodeCheckbox } from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeButton, vsCodeCheckbox } from "darbot-webview-ui";
 
 provideVSCodeDesignSystem().register(vsCodeButton(), vsCodeCheckbox());
 ```
@@ -705,7 +705,7 @@ Back in `src/webview/main.ts` add the following code that will send a message wh
 ```typescript
 // file: src/webview/main.ts
 
-import { provideVSCodeDesignSystem, vsCodeButton, Button } from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeButton, Button } from "darbot-webview-ui";
 
 // ... toolkit registeration code ...
 

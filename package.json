@@ -1,17 +1,17 @@
 {
-	"name": "@vscode/webview-ui-toolkit",
+	"name": "darbot-webview-ui",
 	"version": "1.4.0",
-	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+	"description": "An unofficial continuation of Microsoft's deprecated VSCode Webview UI Toolkit - A component library for building webview-based extensions in Visual Studio Code.",
+	"homepage": "https://github.com/darbotlabs/darbot-webview-ui#readme",
 	"license": "MIT",
-	"author": "Microsoft Corporation",
+	"author": "DarBot Labs",
 	"type": "module",
 	"bugs": {
-		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
+		"url": "https://github.com/darbotlabs/darbot-webview-ui/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
+		"url": "git+https://github.com/darbotlabs/darbot-webview-ui.git"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -64,6 +64,9 @@
 		"ui",
 		"components",
 		"web components",
-		"react"
+		"react",
+		"darbot",
+		"unofficial",
+		"continuation"
 	]
 }

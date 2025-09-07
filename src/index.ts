@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation.
+// Copyright (c) DarBot Labs (originally Microsoft Corporation).
 // Licensed under the MIT License.
 
 export * from './vscode-design-system.js';
