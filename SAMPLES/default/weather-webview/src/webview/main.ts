@@ -9,9 +9,9 @@ import {
   vsCodeOption,
   vsCodeTextField,
   vsCodeProgressRing,
-} from "@vscode/webview-ui-toolkit";
+} from "darbot-webview-ui";
 
-// In order to use the Webview UI Toolkit web components they
+// In order to use the DarBot Webview UI Toolkit web components they
 // must be registered with the browser (i.e. webview) using the
 // syntax below.
 provideVSCodeDesignSystem().register(

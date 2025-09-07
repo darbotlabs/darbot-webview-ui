@@ -3,7 +3,7 @@ import {
   VSCodePanels,
   VSCodePanelTab,
   VSCodePanelView,
-} from "@vscode/webview-ui-toolkit/react";
+} from "darbot-webview-ui/react";
 
 export function PanelsDemo() {
   return (

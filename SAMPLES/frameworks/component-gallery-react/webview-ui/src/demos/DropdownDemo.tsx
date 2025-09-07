@@ -1,4 +1,4 @@
-import { VSCodeDropdown, VSCodeOption } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeDropdown, VSCodeOption } from "darbot-webview-ui/react";
 
 export function DropdownDemo() {
   return (

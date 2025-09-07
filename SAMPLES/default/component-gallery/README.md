@@ -1,6 +1,6 @@
 # Component Gallery Sample Extension
 
-This sample extension demonstrates every component in the Webview UI Toolkit for Visual Studio Code.
+This sample extension demonstrates every component in the DarBot Webview UI Toolkit for Visual Studio Code.
 
 ![A screenshot of the sample extension.](./assets/component-gallery.png)
 
@@ -8,7 +8,7 @@ This sample extension demonstrates every component in the Webview UI Toolkit for
 
 ```bash
 # Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/default/component-gallery component-gallery
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/component-gallery component-gallery
 
 # Navigate into sample directory
 cd component-gallery

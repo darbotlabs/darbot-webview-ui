@@ -8,7 +8,7 @@ This sample extension showcases the toolkit in the context of a simple notepad e
 
 ```bash
 # Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/default/notepad notepad
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/notepad notepad
 
 # Navigate into sample directory
 cd notepad

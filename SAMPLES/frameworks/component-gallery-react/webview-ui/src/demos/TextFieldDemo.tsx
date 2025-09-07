@@ -1,4 +1,4 @@
-import { VSCodeTextField } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeTextField } from "darbot-webview-ui/react";
 
 export function TextFieldDemo() {
   return (

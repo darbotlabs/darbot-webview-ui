@@ -1,4 +1,4 @@
-import { VSCodeRadio, VSCodeRadioGroup } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeRadio, VSCodeRadioGroup } from "darbot-webview-ui/react";
 
 // Note: There is a known bug with VSCodeRadio component selection on first interaction. A workaround fix is 
 // to make sure that all radio components have a unique `value` attribute applied as demonstrated below.

@@ -1,4 +1,4 @@
-import { VSCodeTextArea } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeTextArea } from "darbot-webview-ui/react";
 
 export function TextAreaDemo() {
   return (

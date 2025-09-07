@@ -8,7 +8,7 @@ This is a version of the Hello World sample extension that uses Webpack instead 
 
 ```bash
 # Copy sample extension locally
-npx degit microsoft/vscode-webview-ui-toolkit-samples/default/hello-world-webpack hello-world
+npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/hello-world-webpack hello-world
 
 # Navigate into sample directory
 cd hello-world

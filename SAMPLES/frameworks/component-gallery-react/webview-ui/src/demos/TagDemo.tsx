@@ -1,4 +1,4 @@
-import { VSCodeTag } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeTag } from "darbot-webview-ui/react";
 
 export function TagDemo() {
   return (

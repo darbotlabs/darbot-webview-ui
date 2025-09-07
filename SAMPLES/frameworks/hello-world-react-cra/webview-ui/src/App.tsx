@@ -1,5 +1,5 @@
 import { vscode } from "./utilities/vscode";
-import { VSCodeButton } from "@vscode/webview-ui-toolkit/react";
+import { VSCodeButton } from "darbot-webview-ui/react";
 import "./App.css";
 
 function App() {

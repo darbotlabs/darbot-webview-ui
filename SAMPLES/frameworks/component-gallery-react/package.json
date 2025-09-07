@@ -1,7 +1,7 @@
 {
   "name": "component-gallery-react",
   "displayName": "component-gallery-react",
-  "description": "A sample extension to show off all React components in the Webview UI Toolkit for Visual Studio Code.",
+  "description": "A sample extension to show off the DarBot Webview UI Toolkit for Visual Studio Code.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.75.0"
