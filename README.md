@@ -37,7 +37,7 @@ npm install --save darbot-webview-ui
 For more information, check out the following documentation:
 
 - [Component Docs](./docs/components.md)
-- [Toolkit Extension Samples](https://github.com/darbotlabs/darbot-webview-ui-samples) _(Coming Soon - use [original samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples) with package name updated)_
+- [Toolkit Extension Samples](./SAMPLES) - All samples are now included in this repository and updated to use darbot-webview-ui
 - [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 - [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
