@@ -6,48 +6,64 @@ const util = require('util');
 const execShellCommand = util.promisify(exec);
 
 /**
- * This script automates the process of installing the latest version of the 
+ * This script automates the process of installing the latest version of the
  * toolkit package in every sample extension.
- * 
+ *
  * Run `node scripts/update-toolkit-package.js` from the root directory
  * of this repository.
- * 
+ *
  * Updating the script:
- * 
+ *
  * To update this script to include a new directory, add a new call to the
  * `installLatestToolkitPackage` function within the `main` function below.
- * 
+ *
  */
 async function main() {
 	console.log('Updating toolkit package to latest version...');
-  console.log();
+	console.log();
 
-  await installLatestToolkitPackage('default');
-  await installLatestToolkitPackage('frameworks', 'webview-ui');
+	await installLatestToolkitPackage('default');
+	await installLatestToolkitPackage('frameworks', 'webview-ui');
 
-	console.log(color(['bold', 'green'], 'All extension samples updated to the latest version of the toolkit!'));
+	console.log(
+		color(
+			['bold', 'green'],
+			'All extension samples updated to the latest version of the toolkit!'
+		)
+	);
 }
 
 async function installLatestToolkitPackage(rootDir, installDir = '') {
-  try {
-    const dirs = getSubDirectories(rootDir);
-    for (const dir of dirs) {
-      const dirPath = installDir.length > 0 ? `${rootDir}/${dir}/${installDir}` : `${rootDir}/${dir}`;
-      console.log(color(['dim'], `⏳ Updating toolkit in ${dir}...`));
-      await execShellCommand(`cd ${dirPath} && npm i darbot-webview-ui@latest`);
-      console.log(color(['dim'], `✅ Latest toolkit package installed in ${dir}!`));
-      console.log();
-    }
-  } catch (err) {
-    console.log(`${color(['red'], 'Error: Could not update toolkit package to latest version')}\n    ${err}`);
-    process.exit();
-  }
+	try {
+		const dirs = getSubDirectories(rootDir);
+		for (const dir of dirs) {
+			const dirPath =
+				installDir.length > 0
+					? `${rootDir}/${dir}/${installDir}`
+					: `${rootDir}/${dir}`;
+			console.log(color(['dim'], `⏳ Updating toolkit in ${dir}...`));
+			await execShellCommand(
+				`cd ${dirPath} && npm i darbot-webview-ui@latest`
+			);
+			console.log(
+				color(['dim'], `✅ Latest toolkit package installed in ${dir}!`)
+			);
+			console.log();
+		}
+	} catch (err) {
+		console.log(
+			`${color(['red'], 'Error: Could not update toolkit package to latest version')}\n    ${err}`
+		);
+		process.exit();
+	}
 }
 
 function getSubDirectories(source) {
-  const dirContent = fs.readdirSync(source, { withFileTypes: true });
-  const subDirectoryList = dirContent.filter(content => content.isDirectory()).map(dir => dir.name);
-  return subDirectoryList;
+	const dirContent = fs.readdirSync(source, {withFileTypes: true});
+	const subDirectoryList = dirContent
+		.filter(content => content.isDirectory())
+		.map(dir => dir.name);
+	return subDirectoryList;
 }
 
 const colors = {

@@ -1,4 +1,4 @@
-import "solid-js";
+import 'solid-js';
 
 // An important part of getting the DarBot Webview UI Toolkit to work with
 // Solid + TypeScript + JSX is to extend the solid-js JSX.IntrinsicElements
@@ -14,24 +14,24 @@ import "solid-js";
 //
 // https://github.com/microsoft/vscode-webview-ui-toolkit/blob/main/docs/components.md
 //
-declare module "solid-js" {
-  namespace JSX {
-    interface IntrinsicElements {
-      "vscode-badge": any;
-      "vscode-button": any;
-      "vscode-checkbox": any;
-      "vscode-data-grid": any;
-      "vscode-divider": any;
-      "vscode-dropdown": any;
-      "vscode-link": any;
-      "vscode-option": any;
-      "vscode-panels": any;
-      "vscode-progress-ring": any;
-      "vscode-radio": any;
-      "vscode-radio-group": any;
-      "vscode-tag": any;
-      "vscode-text-area": any;
-      "vscode-text-field": any;
-    }
-  }
+declare module 'solid-js' {
+	namespace JSX {
+		interface IntrinsicElements {
+			'vscode-badge': any;
+			'vscode-button': any;
+			'vscode-checkbox': any;
+			'vscode-data-grid': any;
+			'vscode-divider': any;
+			'vscode-dropdown': any;
+			'vscode-link': any;
+			'vscode-option': any;
+			'vscode-panels': any;
+			'vscode-progress-ring': any;
+			'vscode-radio': any;
+			'vscode-radio-group': any;
+			'vscode-tag': any;
+			'vscode-text-area': any;
+			'vscode-text-field': any;
+		}
+	}
 }

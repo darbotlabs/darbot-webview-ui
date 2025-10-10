@@ -2,9 +2,12 @@
 
 [![NPM Version](https://img.shields.io/npm/v/darbot-webview-ui?color=blue)](https://www.npmjs.com/package/darbot-webview-ui)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+[![Website](https://img.shields.io/badge/website-live-blueviolet)](https://darbotlabs.github.io/darbot-webview-ui/)
 
 > [!NOTE]
 > This is an **unofficial continuation** of Microsoft's deprecated [VSCode Webview UI Toolkit](https://github.com/microsoft/vscode-webview-ui-toolkit), which was deprecated on January 1, 2025. This project aims to maintain and enhance the toolkit with modern dependencies and continued support for VSCode extension development.
+>
+> 🌐 **Visit our new website:** [https://darbotlabs.github.io/darbot-webview-ui/](https://darbotlabs.github.io/darbot-webview-ui/)
 
 > [!WARNING]  
 > This project is **unofficial and unsupported** by Microsoft. It is maintained by the community as a continuation of the original toolkit.
@@ -24,7 +27,7 @@ Some of the library's features include:
 
 ## Getting started
 
-Follow the [Getting Started Guide](./docs/getting-started.md).
+Follow the [Getting Started Guide](./docs/getting-started.md) or visit our [interactive website](https://darbotlabs.github.io/darbot-webview-ui/getting-started.html).
 
 If you already have a webview-based extension, you can install the toolkit with the following command:
 
@@ -36,7 +39,9 @@ npm install --save darbot-webview-ui
 
 For more information, check out the following documentation:
 
-- [Component Docs](./docs/components.md)
+- 🌐 **[Official Website](https://darbotlabs.github.io/darbot-webview-ui/)** - Interactive documentation with retro cyber design
+- [Component Docs](./docs/components.md) - ([Web version](https://darbotlabs.github.io/darbot-webview-ui/components.html))
+- [Getting Started Guide](./docs/getting-started.md) - ([Web version](https://darbotlabs.github.io/darbot-webview-ui/getting-started.html))
 - [Toolkit Extension Samples](./SAMPLES) - All samples are now included in this repository and updated to use darbot-webview-ui
 - [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)

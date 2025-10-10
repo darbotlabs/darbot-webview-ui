@@ -22,11 +22,11 @@ A set of sample extensions using vanilla HTML, CSS, and JavaScript/TypeScript to
 Don't see a demonstration for your desired use case, VS Code API, etc.? Open an issue and request it.
 
 | Sample extension                                     | Description                                                                                   |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [component-gallery](./default/component-gallery)     | Demonstrates every component in the DarBot DarBot Webview UI Toolkit.                                       |
-| [editable-data-grid](./default/editable-data-grid)   | Demonstrates a workaround solution to create an editable data grid.                                       |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [component-gallery](./default/component-gallery)     | Demonstrates every component in the DarBot DarBot Webview UI Toolkit.                         |
+| [editable-data-grid](./default/editable-data-grid)   | Demonstrates a workaround solution to create an editable data grid.                           |
 | [hello-world](./default/hello-world)                 | A basic hello-world starter extension.                                                        |
-| [hello-world-webpack](./default/hello-world-webpack) | A basic hello-world starter extension (built using Webpack instead of esbuild).                                                        |
+| [hello-world-webpack](./default/hello-world-webpack) | A basic hello-world starter extension (built using Webpack instead of esbuild).               |
 | [notepad](./default/notepad)                         | A simple notetaking extension that leverages the VS Code TreeView API.                        |
 | [weather-webview](./default/weather-webview)         | Demonstrates the toolkit being used within a webview view – i.e., Visual Studio Code sidebar. |
 
@@ -34,15 +34,15 @@ Don't see a demonstration for your desired use case, VS Code API, etc.? Open an 
 
 A set of sample extensions that demonstrate how to use various web frameworks to render the webview UI.
 
-| Sample extension                                                | Description                                                           |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [component-gallery-react](./frameworks/component-gallery-react) | Demonstrates every React component in the DarBot DarBot Webview UI Toolkit.                  |
-| [hello-world-angular](./frameworks/hello-world-angular)         | A basic hello-world starter extension using Angular.                  |
-| [hello-world-react-cra](./frameworks/hello-world-react-cra)     | A basic hello-world starter extension using React + Create React App. |
-| [hello-world-react-vite](./frameworks/hello-world-react-vite)   | A basic hello-world starter extension using React + Vite.             |
-| [hello-world-solidjs](./frameworks/hello-world-solidjs)         | A basic hello-world starter extension using SolidJS.                  |
-| [hello-world-svelte](./frameworks/hello-world-svelte)           | A basic hello-world starter extension using Svelte.                   |
-| [hello-world-vue](./frameworks/hello-world-vue)                 | A basic hello-world starter extension using Vue.                      |
+| Sample extension                                                | Description                                                                 |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [component-gallery-react](./frameworks/component-gallery-react) | Demonstrates every React component in the DarBot DarBot Webview UI Toolkit. |
+| [hello-world-angular](./frameworks/hello-world-angular)         | A basic hello-world starter extension using Angular.                        |
+| [hello-world-react-cra](./frameworks/hello-world-react-cra)     | A basic hello-world starter extension using React + Create React App.       |
+| [hello-world-react-vite](./frameworks/hello-world-react-vite)   | A basic hello-world starter extension using React + Vite.                   |
+| [hello-world-solidjs](./frameworks/hello-world-solidjs)         | A basic hello-world starter extension using SolidJS.                        |
+| [hello-world-svelte](./frameworks/hello-world-svelte)           | A basic hello-world starter extension using Svelte.                         |
+| [hello-world-vue](./frameworks/hello-world-vue)                 | A basic hello-world starter extension using Vue.                            |
 
 ## Contributing
 
@@ -55,4 +55,3 @@ DarBot Labs and any contributors grant you a license to any code in this folder 
 This project is an unofficial continuation of Microsoft's original VSCode DarBot Webview UI Toolkit samples. The original project was released under the MIT License.
 
 This project may contain trademarks or logos for projects, products, or services. Use of Microsoft trademarks or logos in these samples must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party's policies.
-
