@@ -1,0 +1,6 @@
+# GitHub Pages Configuration for DarBot Webview UI Toolkit
+theme: jekyll-theme-minimal
+title: DarBot Webview UI Toolkit
+description: An unofficial continuation of Microsoft's deprecated VSCode Webview UI Toolkit
+show_downloads: true
+google_analytics: 

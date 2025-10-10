@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components - DarBot Webview UI Toolkit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .components-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .page-header h1 {
+            font-family: var(--font-display, 'Orbitron', sans-serif);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            background: linear-gradient(135deg, #ff0090, #00d9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .component-categories {
+            display: grid;
+            gap: 3rem;
+        }
+        
+        .category {
+            background: rgba(26, 31, 58, 0.6);
+            backdrop-filter: blur(10px);
+            border: 2px solid #1a1f3a;
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .category:hover {
+            border-color: #ff0090;
+            box-shadow: 0 8px 32px rgba(255, 0, 144, 0.4);
+        }
+        
+        .category h2 {
+            font-family: var(--font-display, 'Orbitron', sans-serif);
+            color: #00d9ff;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #b537f2;
+        }
+        
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .component-card {
+            background: rgba(10, 14, 39, 0.8);
+            border: 2px solid #1a1f3a;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .component-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .component-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);
+        }
+        
+        .component-card:hover::before {
+            left: 100%;
+        }
+        
+        .component-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .component-icon {
+            font-size: 2.5rem;
+        }
+        
+        .component-card h3 {
+            font-family: var(--font-display, 'Orbitron', sans-serif);
+            color: #ff0090;
+            font-size: 1.8rem;
+        }
+        
+        .component-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .component-usage {
+            background: rgba(5, 8, 22, 0.9);
+            border: 1px solid #00d9ff;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #39ff14;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .component-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .component-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid #00d9ff;
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .component-link:hover {
+            background: #00d9ff;
+            color: #0a0e27;
+            transform: translateY(-2px);
+        }
+        
+        .filter-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: rgba(26, 31, 58, 0.6);
+            border: 2px solid #1a1f3a;
+            color: #00d9ff;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #00d9ff;
+            color: #0a0e27;
+            border-color: #00d9ff;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .components-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .components-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-background"></div>
+    <div class="scanline"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">DarBot WebView UI</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./getting-started.html">Get Started</a></li>
+                <li><a href="./components.html">Components</a></li>
+                <li><a href="https://github.com/darbotlabs/darbot-webview-ui">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="components-container">
+        <div class="page-header">
+            <h1>Component Library</h1>
+            <p>A comprehensive collection of VS Code-themed components for building beautiful webview extensions. All components support automatic theming and are fully accessible.</p>
+        </div>
+        
+        <div class="component-categories">
+            <!-- Form Components -->
+            <div class="category">
+                <h2>📝 Form Components</h2>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">🔘</span>
+                            <h3>Button</h3>
+                        </div>
+                        <p>Clickable button component with primary, secondary, and icon variants. Supports appearance customization and disabled states.</p>
+                        <div class="component-usage">&lt;vscode-button&gt;Click Me&lt;/vscode-button&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#button" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">☑️</span>
+                            <h3>Checkbox</h3>
+                        </div>
+                        <p>Standard checkbox for boolean input. Supports checked, indeterminate, and disabled states with customizable labels.</p>
+                        <div class="component-usage">&lt;vscode-checkbox&gt;Accept terms&lt;/vscode-checkbox&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#checkbox" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">🔽</span>
+                            <h3>Dropdown</h3>
+                        </div>
+                        <p>Select input with customizable options. Supports single selection, positioning, and keyboard navigation.</p>
+                        <div class="component-usage">&lt;vscode-dropdown&gt;
+  &lt;vscode-option&gt;Option 1&lt;/vscode-option&gt;
+&lt;/vscode-dropdown&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#dropdown" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">📻</span>
+                            <h3>Radio & Radio Group</h3>
+                        </div>
+                        <p>Radio buttons for mutually exclusive selections. Group component manages state across multiple radio options.</p>
+                        <div class="component-usage">&lt;vscode-radio-group&gt;
+  &lt;vscode-radio&gt;Option A&lt;/vscode-radio&gt;
+  &lt;vscode-radio&gt;Option B&lt;/vscode-radio&gt;
+&lt;/vscode-radio-group&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#radio-radio-group" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">✏️</span>
+                            <h3>Text Field</h3>
+                        </div>
+                        <p>Single-line text input with placeholder support. Includes variants for email, password, and other input types.</p>
+                        <div class="component-usage">&lt;vscode-text-field placeholder="Enter text"&gt;&lt;/vscode-text-field&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#text-field" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">📝</span>
+                            <h3>Text Area</h3>
+                        </div>
+                        <p>Multi-line text input for longer content. Supports resize, placeholder, and row customization.</p>
+                        <div class="component-usage">&lt;vscode-text-area rows="4"&gt;&lt;/vscode-text-area&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#text-area" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Display Components -->
+            <div class="category">
+                <h2>🎨 Display Components</h2>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">🏷️</span>
+                            <h3>Badge</h3>
+                        </div>
+                        <p>Small status indicators and notification badges. Perfect for counts, labels, and status displays.</p>
+                        <div class="component-usage">&lt;vscode-badge&gt;12&lt;/vscode-badge&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#badge" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">🔗</span>
+                            <h3>Link</h3>
+                        </div>
+                        <p>Hyperlink component with VS Code styling. Supports external and internal navigation.</p>
+                        <div class="component-usage">&lt;vscode-link href="https://example.com"&gt;Click here&lt;/vscode-link&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#link" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">🏷️</span>
+                            <h3>Tag</h3>
+                        </div>
+                        <p>Dismissible tag component for labels and categories. Supports custom colors and removable functionality.</p>
+                        <div class="component-usage">&lt;vscode-tag&gt;TypeScript&lt;/vscode-tag&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#tag" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">➖</span>
+                            <h3>Divider</h3>
+                        </div>
+                        <p>Horizontal or vertical divider for separating content sections. Customizable orientation and styling.</p>
+                        <div class="component-usage">&lt;vscode-divider&gt;&lt;/vscode-divider&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#divider" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Layout Components -->
+            <div class="category">
+                <h2>📐 Layout Components</h2>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">📋</span>
+                            <h3>Panels</h3>
+                        </div>
+                        <p>Collapsible panel container for organizing content. Supports expand/collapse with header customization.</p>
+                        <div class="component-usage">&lt;vscode-panels&gt;
+  &lt;vscode-panel-tab&gt;Tab 1&lt;/vscode-panel-tab&gt;
+  &lt;vscode-panel-view&gt;Content&lt;/vscode-panel-view&gt;
+&lt;/vscode-panels&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#panels" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">📊</span>
+                            <h3>Data Grid</h3>
+                        </div>
+                        <p>Powerful table component with sorting, selection, and custom templates. Perfect for displaying structured data.</p>
+                        <div class="component-usage">&lt;vscode-data-grid&gt;&lt;/vscode-data-grid&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#data-grid" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feedback Components -->
+            <div class="category">
+                <h2>🔄 Feedback Components</h2>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-header">
+                            <span class="component-icon">⭕</span>
+                            <h3>Progress Ring</h3>
+                        </div>
+                        <p>Circular progress indicator for loading states. Supports determinate and indeterminate modes.</p>
+                        <div class="component-usage">&lt;vscode-progress-ring&gt;&lt;/vscode-progress-ring&gt;</div>
+                        <div class="component-links">
+                            <a href="./components.md#progress-ring" class="component-link">📖 Docs</a>
+                            <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/component-gallery" class="component-link">🎨 Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: rgba(26, 31, 58, 0.6); backdrop-filter: blur(10px); border: 2px solid #1a1f3a;">
+            <h2 style="font-family: var(--font-display); color: #00d9ff; font-size: 2rem; margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.2rem; margin-bottom: 2rem;">Install the toolkit and start building amazing VS Code extensions today!</p>
+            <a href="./getting-started.html" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #ff0090, #b537f2); color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">View Getting Started Guide</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>DarBot Webview UI Toolkit is an unofficial continuation of Microsoft's deprecated VSCode Webview UI Toolkit.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="./getting-started.html">Getting Started</a>
+                <a href="./components.html">Components</a>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES">Samples</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Community</h3>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui">GitHub</a>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/issues">Issues</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/blob/main/LICENSE">MIT License</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 DarBot Labs. MIT License.</p>
+        </div>
+    </footer>
+</body>
+</html>
