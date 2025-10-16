@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - DarBot Webview UI Toolkit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Additional styles for documentation pages */
+        .doc-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        
+        .doc-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .doc-header h1 {
+            font-family: var(--font-display, 'Orbitron', sans-serif);
+            font-size: clamp(2rem, 5vw, 3rem);
+            background: linear-gradient(135deg, #ff0090, #00d9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .doc-header .breadcrumb {
+            color: #00d9ff;
+            font-size: 1rem;
+        }
+        
+        .doc-header .breadcrumb a {
+            color: #ff0090;
+            text-decoration: none;
+        }
+        
+        .doc-content {
+            background: rgba(26, 31, 58, 0.6);
+            backdrop-filter: blur(10px);
+            border: 2px solid #1a1f3a;
+            padding: 3rem;
+            line-height: 1.8;
+        }
+        
+        .doc-content h2 {
+            font-family: var(--font-display, 'Orbitron', sans-serif);
+            color: #00d9ff;
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ff0090;
+        }
+        
+        .doc-content h3 {
+            font-family: var(--font-display, 'Orbitron', sans-serif);
+            color: #b537f2;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        .doc-content p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 1.2rem;
+        }
+        
+        .doc-content ul,
+        .doc-content ol {
+            color: rgba(255, 255, 255, 0.85);
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .doc-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .doc-content code {
+            font-family: 'Fira Code', monospace;
+            background: rgba(0, 217, 255, 0.1);
+            color: #39ff14;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        
+        .doc-content pre {
+            background: rgba(10, 14, 39, 0.9);
+            border: 1px solid #00d9ff;
+            padding: 1.5rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            color: #00d9ff;
+            font-size: 0.95rem;
+        }
+        
+        .install-command {
+            background: rgba(10, 14, 39, 0.9);
+            border: 2px solid #ff0090;
+            padding: 1.5rem;
+            border-radius: 5px;
+            font-family: 'Fira Code', monospace;
+            color: #39ff14;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 144, 0.3);
+        }
+        
+        .info-box {
+            background: rgba(0, 217, 255, 0.1);
+            border-left: 4px solid #00d9ff;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .warning-box {
+            background: rgba(255, 0, 144, 0.1);
+            border-left: 4px solid #ff0090;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .next-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .next-step-card {
+            background: rgba(26, 31, 58, 0.7);
+            border: 2px solid #1a1f3a;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .next-step-card:hover {
+            border-color: #ff0090;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(255, 0, 144, 0.4);
+        }
+        
+        .next-step-card h3 {
+            color: #00d9ff;
+            margin-bottom: 1rem;
+        }
+        
+        .next-step-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-background"></div>
+    <div class="scanline"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">DarBot WebView UI</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./getting-started.html">Get Started</a></li>
+                <li><a href="./components.html">Components</a></li>
+                <li><a href="https://github.com/darbotlabs/darbot-webview-ui">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="doc-container">
+        <div class="doc-header">
+            <div class="breadcrumb">
+                <a href="./index.html">Home</a> / Getting Started
+            </div>
+            <h1>Getting Started Guide</h1>
+        </div>
+        
+        <div class="doc-content">
+            <p>This guide will walk you through creating a webview-based VS Code extension with the DarBot Webview UI Toolkit. Follow these steps to get up and running quickly.</p>
+            
+            <h2>Quick Start</h2>
+            <p>If you already have a webview-based extension, you can install the toolkit with a single command:</p>
+            
+            <div class="install-command">
+                npm install --save darbot-webview-ui
+            </div>
+            
+            <div class="info-box">
+                <strong>💡 Pro Tip:</strong> Check out our <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES" style="color: #00d9ff;">sample extensions</a> for pre-configured starter templates with various frameworks including React, Vue, Svelte, Angular, and more!
+            </div>
+            
+            <h2>Part 1: Create a Webview Extension</h2>
+            <p>Before using the toolkit, you need a webview-based extension. We'll use Yeoman and the VS Code Extension Generator.</p>
+            
+            <h3>Prerequisites</h3>
+            <ul>
+                <li><a href="https://nodejs.org/" style="color: #00d9ff;">Node.js</a> (v14 or higher)</li>
+                <li><a href="https://git-scm.com/" style="color: #00d9ff;">Git</a></li>
+                <li><a href="https://code.visualstudio.com/" style="color: #00d9ff;">Visual Studio Code</a></li>
+            </ul>
+            
+            <h3>Install Generator</h3>
+            <pre><code>npm install -g yo generator-code</code></pre>
+            
+            <h3>Generate Extension</h3>
+            <pre><code>yo code
+
+# ? What type of extension do you want to create? New Extension (TypeScript)
+# ? What's the name of your extension? hello-world
+# ? What's the identifier of your extension? hello-world
+# ? Initialize a git repository? Yes
+# ? Which package manager to use? npm</code></pre>
+            
+            <h2>Part 2: Install the Toolkit</h2>
+            <p>Navigate to your extension directory and install the DarBot Webview UI Toolkit:</p>
+            
+            <pre><code>cd hello-world
+npm install --save darbot-webview-ui</code></pre>
+            
+            <h2>Part 3: Set Up Your Webview</h2>
+            <p>Create a simple webview that uses the toolkit components.</p>
+            
+            <h3>1. Register Components</h3>
+            <p>In your webview JavaScript/TypeScript file, import and register the components you need:</p>
+            
+            <pre><code>import {
+  provideVSCodeDesignSystem,
+  vsCodeButton,
+  vsCodeTextField,
+  vsCodeCheckbox
+} from 'darbot-webview-ui';
+
+// Register components
+provideVSCodeDesignSystem().register(
+  vsCodeButton(),
+  vsCodeTextField(),
+  vsCodeCheckbox()
+);</code></pre>
+            
+            <h3>2. Use Components in HTML</h3>
+            <p>Now you can use the web components in your webview HTML:</p>
+            
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello from DarBot Webview UI!&lt;/h1&gt;
+    
+    &lt;vscode-text-field placeholder="Enter your name"&gt;&lt;/vscode-text-field&gt;
+    &lt;vscode-checkbox&gt;Enable notifications&lt;/vscode-checkbox&gt;
+    &lt;vscode-button&gt;Click Me!&lt;/vscode-button&gt;
+    
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            
+            <h3>3. Message Passing</h3>
+            <p>Set up communication between your extension and webview:</p>
+            
+            <pre><code>// In your webview
+const vscode = acquireVsCodeApi();
+
+document.querySelector('vscode-button').addEventListener('click', () => {
+  vscode.postMessage({ command: 'hello' });
+});
+
+// In your extension
+panel.webview.onDidReceiveMessage(
+  message => {
+    switch (message.command) {
+      case 'hello':
+        vscode.window.showInformationMessage('Hello from webview!');
+        break;
+    }
+  }
+);</code></pre>
+            
+            <div class="warning-box">
+                <strong>⚠️ Important:</strong> All toolkit components automatically inherit VS Code's current theme. No additional configuration needed for theming!
+            </div>
+            
+            <h2>Framework-Specific Guides</h2>
+            <p>The toolkit works with any framework or vanilla JavaScript. Check out our framework-specific samples:</p>
+            
+            <div class="next-steps">
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/frameworks/hello-world-react-cra" class="next-step-card">
+                    <h3>⚛️ React</h3>
+                    <p>Use with Create React App or Vite</p>
+                </a>
+                
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/frameworks/hello-world-vue" class="next-step-card">
+                    <h3>🌿 Vue</h3>
+                    <p>Integrate with Vue 3</p>
+                </a>
+                
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/frameworks/hello-world-svelte" class="next-step-card">
+                    <h3>🔥 Svelte</h3>
+                    <p>Use with SvelteKit</p>
+                </a>
+                
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/frameworks/hello-world-angular" class="next-step-card">
+                    <h3>🅰️ Angular</h3>
+                    <p>Integrate with Angular</p>
+                </a>
+                
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/frameworks/hello-world-solidjs" class="next-step-card">
+                    <h3>💠 SolidJS</h3>
+                    <p>Use with Solid</p>
+                </a>
+                
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES/default/hello-world" class="next-step-card">
+                    <h3>📝 Vanilla JS</h3>
+                    <p>No framework needed</p>
+                </a>
+            </div>
+            
+            <h2>Next Steps</h2>
+            <ul>
+                <li>📚 Explore the <a href="./components.html" style="color: #00d9ff;">Component Documentation</a></li>
+                <li>🔍 Browse <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES" style="color: #00d9ff;">Sample Extensions</a></li>
+                <li>📖 Read the <a href="https://code.visualstudio.com/api/extension-guides/webview" style="color: #00d9ff;">VS Code Webview API Guide</a></li>
+                <li>🎨 Check out the <a href="https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code" style="color: #00d9ff;">Figma Toolkit</a></li>
+                <li>💬 Join the discussion on <a href="https://github.com/darbotlabs/darbot-webview-ui/discussions" style="color: #00d9ff;">GitHub</a></li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>🚀 Ready to dive deeper?</strong> Check out the full <a href="./getting-started.md" style="color: #00d9ff;">detailed Getting Started guide</a> for comprehensive setup instructions including bundling, testing, and deployment.
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>DarBot Webview UI Toolkit is an unofficial continuation of Microsoft's deprecated VSCode Webview UI Toolkit.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="./getting-started.html">Getting Started</a>
+                <a href="./components.html">Components</a>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/tree/main/SAMPLES">Samples</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Community</h3>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui">GitHub</a>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/issues">Issues</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="https://github.com/darbotlabs/darbot-webview-ui/blob/main/LICENSE">MIT License</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 DarBot Labs. MIT License.</p>
+        </div>
+    </footer>
+</body>
+</html>

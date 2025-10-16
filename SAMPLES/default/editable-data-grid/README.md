@@ -23,8 +23,8 @@ This solution implements the following features:
 
 - Editable data grid cells using the `contenteditble` attribute
 - Keyboard shortcuts to enter/exit edit mode
-  - `Enter`: Will toggle between edit modes when focused on a given cell
-  - `Escape`: Will exit edit mode when focused on a given cell
+    - `Enter`: Will toggle between edit modes when focused on a given cell
+    - `Escape`: Will exit edit mode when focused on a given cell
 - Mouse click and blur will enter/exit edit mode
 - Cell text will be automatically highlighted when entering edit mode
 - Cell changes will be synced with the underlying `vscode-data-grid` data structure

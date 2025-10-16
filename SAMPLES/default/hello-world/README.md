@@ -7,7 +7,7 @@ This is the sample extension that goes along with the DarBot Webview UI Toolkit 
 ## Run The Sample
 
 ```bash
-# Copy sample extension locally  
+# Copy sample extension locally
 npx degit darbotlabs/darbot-webview-ui/SAMPLES/default/hello-world hello-world
 
 # Navigate into sample directory
